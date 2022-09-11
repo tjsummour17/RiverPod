@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "991135240586",
+    "firebase_url": "https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "riverpod-application",
+    "storage_bucket": "riverpod-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991135240586:android:f365103eba0dcb644cb873",
+        "android_client_info": {
+          "package_name": "com.septware.riverpod_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.septware.riverpod_app",
+            "certificate_hash": "abeef062a01dddc69694a1a70264a0287b669dbf"
+          }
+        },
+        {
+          "client_id": "991135240586-kdvo7fdsgg2710nj3kb8v2bbstk41o1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtD3ZjUtmPlBWb1LKu5qsWKynV_oPiXzk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991135240586-kdvo7fdsgg2710nj3kb8v2bbstk41o1m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.septware.riverpodApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

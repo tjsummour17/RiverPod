@@ -1,0 +1,23 @@
+{
+  "appName": "RiverPod",
+  "appDescription": "Thank you for allowing me to prove myself to you and I hope you like my work on this assignment",
+  "search": "Search",
+  "settings": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "cancel": "Cancel",
+  "pleaseSelectLanguage": "Please select application language",
+  "system": "System",
+  "light": "Light",
+  "dark": "Dark",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "logout": "Logout",
+  "fullName": "Full name",
+  "phone": "Phone number",
+  "createAccount": "Create Account",
+  "dontHaveAccount": "Don't have account? please create you account now",
+  "alreadyHaveAccount": "Already have account? please login to your account",
+  "favorite": "favorites"
+}

@@ -1,4 +1,6 @@
 analyzer:
+  exclude:
+    - '**/*.g.dart'
   strong-mode:
     implicit-casts: false
     implicit-dynamic: false
@@ -98,3 +100,4 @@ linter:
     - use_key_in_widget_constructors
     - avoid_classes_with_only_static_members
     - avoid_setters_without_getters
+    - prefer_single_quotes

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.991135240586-13fmrah9ufldjc01aicivu5b497clj21</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAVtwNBgCkmKajCAU1cJP6FqmipQZF5ckI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>991135240586</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.septware.riverpodApp</string>
+	<key>PROJECT_ID</key>
+	<string>riverpod-application</string>
+	<key>STORAGE_BUCKET</key>
+	<string>riverpod-application.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:991135240586:ios:f14ab19bd3b8db844cb873</string>
+	<key>DATABASE_URL</key>
+	<string>https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
