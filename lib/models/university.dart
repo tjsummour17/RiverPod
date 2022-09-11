@@ -20,6 +20,7 @@ class University {
   String? country;
   List<String>? webPages;
   String? name;
+  bool inFav = false;
 
   Map<String, dynamic> toJson() => _$UniversityToJson(this);
 }

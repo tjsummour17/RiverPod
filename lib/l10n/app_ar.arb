@@ -1,7 +1,7 @@
 {
   "appName": "RiverPod",
   "appDescription": "شكراً لإتاحة الفرصة لي لإثبات نفسي لكم وآمل أن يعجبكم عملي في هذه الإختبار",
-  "search": "بحت",
+  "search": "بحث",
   "settings": "الإعدادات",
   "language": "اللغة",
   "theme": "المظهر",
@@ -18,5 +18,6 @@
   "logout": "تسجيل الخروج",
   "createAccount": "إنشاء حساب",
   "dontHaveAccount": "ليس لديك حساب؟ أنشىء واحداً الآن",
-  "alreadyHaveAccount": "لديك حساب؟ يرجى تسجيل الدخول"
+  "alreadyHaveAccount": "لديك حساب؟ يرجى تسجيل الدخول",
+  "favorite": "المفضلة"
 }

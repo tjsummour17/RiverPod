@@ -49,7 +49,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '991135240586',
     projectId: 'riverpod-application',
     authDomain: 'riverpod-application.firebaseapp.com',
-    databaseURL: 'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'riverpod-application.appspot.com',
     measurementId: 'G-2SRHDJKRPK',
   );
@@ -59,7 +60,8 @@ class DefaultFirebaseOptions {
     appId: '1:991135240586:android:f365103eba0dcb644cb873',
     messagingSenderId: '991135240586',
     projectId: 'riverpod-application',
-    databaseURL: 'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'riverpod-application.appspot.com',
   );
 
@@ -68,10 +70,13 @@ class DefaultFirebaseOptions {
     appId: '1:991135240586:ios:f14ab19bd3b8db844cb873',
     messagingSenderId: '991135240586',
     projectId: 'riverpod-application',
-    databaseURL: 'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'riverpod-application.appspot.com',
-    androidClientId: '991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com',
-    iosClientId: '991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com',
+    androidClientId:
+        '991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com',
+    iosClientId:
+        '991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com',
     iosBundleId: 'com.septware.riverpodApp',
   );
 
@@ -80,10 +85,13 @@ class DefaultFirebaseOptions {
     appId: '1:991135240586:ios:f14ab19bd3b8db844cb873',
     messagingSenderId: '991135240586',
     projectId: 'riverpod-application',
-    databaseURL: 'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL:
+        'https://riverpod-application-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'riverpod-application.appspot.com',
-    androidClientId: '991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com',
-    iosClientId: '991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com',
+    androidClientId:
+        '991135240586-onv5o49j6fb8pab6t5fk33vqri17icp9.apps.googleusercontent.com',
+    iosClientId:
+        '991135240586-13fmrah9ufldjc01aicivu5b497clj21.apps.googleusercontent.com',
     iosBundleId: 'com.septware.riverpodApp',
   );
 }

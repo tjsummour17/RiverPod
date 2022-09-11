@@ -8,6 +8,7 @@ import 'package:riverpod_app/providers/current_user_provider.dart';
 import 'package:riverpod_app/providers/locale_provider.dart';
 import 'package:riverpod_app/providers/theme_provider.dart';
 import 'package:riverpod_app/views/create_account_page.dart';
+import 'package:riverpod_app/views/favorites_page.dart';
 import 'package:riverpod_app/views/login_page.dart';
 import 'package:riverpod_app/views/main_page.dart';
 
@@ -154,10 +155,11 @@ class ApplicationMaterial extends ConsumerWidget {
       ),
       routes: {
         CreateAccountPage.routeName: (context) => const CreateAccountPage(),
-        MainPage.routeName: (context) => const MainPage(),
+        MainPage.routeName: (context) => MainPage(),
         LoginPage.routeName: (context) => const LoginPage(),
+        FavoritePage.routeName: (context) => const FavoritePage(),
       },
-      home: currentUser == null ? const LoginPage() : const MainPage(),
+      home: currentUser == null ? const LoginPage() : MainPage(),
     );
   }
 }

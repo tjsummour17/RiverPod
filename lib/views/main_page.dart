@@ -6,17 +6,17 @@ import 'package:riverpod_app/providers/current_user_provider.dart';
 import 'package:riverpod_app/providers/locale_provider.dart';
 import 'package:riverpod_app/providers/theme_provider.dart';
 import 'package:riverpod_app/utils/build_context_x.dart';
+import 'package:riverpod_app/viewmodels/favorite_view_model.dart';
+import 'package:riverpod_app/viewmodels/home_view_model.dart';
+import 'package:riverpod_app/views/favorites_page.dart';
 import 'package:riverpod_app/views/helpers/responsive_helper.dart';
 import 'package:riverpod_app/views/login_page.dart';
+import 'package:riverpod_app/views/widgets/university_card.dart';
 
 class MainPage extends ConsumerWidget {
-  const MainPage({Key? key}) : super(key: key);
+  MainPage({Key? key}) : super(key: key);
 
   static const String routeName = '/home';
-
-  Widget _buildUniversityList(BuildContext context, int index) {
-    return Container();
-  }
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -28,6 +28,17 @@ class MainPage extends ConsumerWidget {
         ref.watch(userNotifier) ?? const User(name: '', email: '', phone: '');
 
     CurrentUserProvider userProvider = ref.watch(userNotifier.notifier);
+
+    FavoriteViewModel favoriteViewModel = ref.read(favoriteNotifier.notifier);
+
+    HomeViewModel homeViewModel = ref.read(universitiesNotifier.notifier);
+
+    final universities = ref.watch(universitiesNotifier);
+
+    Widget _buildUniversityList(BuildContext context, int index) =>
+        universities != null
+            ? UniversityCard(university: universities[index])
+            : const SizedBox();
 
     Widget _buildDrawerWidget() => ListView(
           children: [
@@ -101,6 +112,18 @@ class MainPage extends ConsumerWidget {
                 );
               },
             ),
+            ListTile(
+              leading: const Icon(
+                Icons.favorite,
+                size: 35,
+              ),
+              title: Text(context.appLocalizations.favorite),
+              trailing: const Icon(Icons.navigate_next_outlined),
+              onTap: () {
+                favoriteViewModel.fetchFavorites(user.id);
+                Navigator.pushNamed(context, FavoritePage.routeName);
+              },
+            ),
             const Divider(),
             ListTile(
               leading: const Icon(
@@ -130,30 +153,59 @@ class MainPage extends ConsumerWidget {
             ),
             child: Text(countryName),
           ),
-          onTap: () {},
+          onTap: () =>
+              homeViewModel.fetchUniversities(countryName: countryName),
         );
 
     Widget _buildBodyWidget() => Column(
           children: [
             const SizedBox(height: 15),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildCountryItem(countryName: 'Jordan', color: Colors.green),
-                _buildCountryItem(countryName: 'Egypt', color: Colors.cyan),
-                _buildCountryItem(
-                  countryName: 'Spain',
-                  color: Colors.purpleAccent,
-                )
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      _buildCountryItem(
+                        countryName: 'Jordan',
+                        color: Colors.green,
+                      ),
+                      _buildCountryItem(
+                        countryName: 'Egypt',
+                        color: Colors.cyan,
+                      ),
+                      _buildCountryItem(
+                        countryName: 'Spain',
+                        color: Colors.purpleAccent,
+                      ),
+                    ],
+                  ),
+                ),
+                if (context.screenWidth > 720) ...[
+                  Expanded(
+                    child: TextFormField(
+                      onChanged: homeViewModel.onSearch,
+                      decoration: InputDecoration(
+                        hintText: context.appLocalizations.search,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 15)
+                ]
               ],
             ),
             const SizedBox(height: 15),
             const Divider(),
             Expanded(
-              child: ListView.builder(
-                itemBuilder: _buildUniversityList,
-                itemCount: 0,
-              ),
+              child: universities == null
+                  ? const Center(
+                      child: CircularProgressIndicator(),
+                    )
+                  : ListView.builder(
+                      padding: const EdgeInsets.all(5),
+                      itemBuilder: _buildUniversityList,
+                      itemCount: universities.length,
+                    ),
             )
           ],
         );
@@ -178,7 +230,14 @@ class MainPage extends ConsumerWidget {
         ),
       ),
       mobile: Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          title: TextFormField(
+            onChanged: homeViewModel.onSearch,
+            decoration: InputDecoration(
+              hintText: context.appLocalizations.search,
+            ),
+          ),
+        ),
         drawer: Drawer(
           child: _buildDrawerWidget(),
         ),

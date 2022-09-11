@@ -15,9 +15,9 @@ service cloud.firestore {
             allow delete: if isMe(userId);
 
             match /favorites/{favoriteId} {
-                allow read: if isMe(userId);
-                allow write: if isMe(userId);
-                allow delete: if isMe(userId);
+                allow read: if isAuthorized();
+                allow write: if isAuthorized();
+                allow delete: if isAuthorized();
             }
         }
     }
